@@ -1,12 +1,3 @@
-import time
-import hashlib
-import hmac
-import binascii
-import random
-import base64
-import urllib2
-from urllib import urlencode
-
 # Private API implementation almost similar to 2-legged OAuth
 # 1. User registers on the webpage gets a consumer_key and secret_key
 # 2. Keys corresponding to user saved in database
@@ -19,6 +10,16 @@ from urllib import urlencode
 #    from db and uses the data, timestamp, consumer and secret key to
 #    recreate the hash signature and matches it. If the user is wrong
 #    or timestamp has been modified in between the request is rejected.
+
+import time
+import hashlib
+import hmac
+import binascii
+import random
+import base64
+import urllib2
+from urllib import urlencode
+
 
 def generate_keys():
     """ generates a pair of public and private keys for a user """
